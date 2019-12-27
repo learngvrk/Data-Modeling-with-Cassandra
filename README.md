@@ -14,7 +14,7 @@ Based on the user activity the startup would like to perform some analytics to d
 
 ### Business Need:
 
-The business is looking to answer the following questions or would like to view the analyze the data obtained from the obtained answer (query results).
+The business is looking to answer the following questions or would like to analyze the data obtained from the answer (query results).
 <b>
 1. Give me the artist, song title and song's length in the music app history that was heard during sessionId = 338, and itemInSession = 4
 2. Give me only the following: name of artist, song (sorted by itemInSession) and user (first and last name) for userid = 10, sessionid = 182
