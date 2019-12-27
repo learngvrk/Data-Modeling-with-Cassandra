@@ -5,20 +5,32 @@ Data-Modeling-with-Apache Cassandra (Udacity: Data Engineering Nano Degree) | le
 
 ![MUSIC DATA ANALYTICS](Music_App_Analytics.jpg)
 
-Courtesy: Adobe Stock Images
+<b>Courtesy:</b> Adobe Stock Images
 
 ### Background:
 The startup Sparkify was interested to analyze the data collected from the user activity on their music app on the mobile phones.
 
 Based on the user activity the startup would like to perform some analytics to derive insights which will help the organization to better understand the user behavior, and so add more interesting features to their mobile app which would enhance the user experience and stratergize the product development roadmap.
 
+### Business Need:
+
+The business is looking to answer the following questions or would like to view the analyze the data obtained from the obtained answer (query results).
+
+1. Give me the artist, song title and song's length in the music app history that was heard during sessionId = 338, and itemInSession = 4
+2. Give me only the following: name of artist, song (sorted by itemInSession) and user (first and last name) for userid = 10, sessionid = 182
+3. Give me every user name (first and last) in my music app history who listened to the song 'All Hands Against His Own'
+
 ### Database Schema
 
-- The database schema the team has come up with the following **STAR-SCHEMA** which captures all the important dimensions needed to create the fact table.
-- Artists, Users, Songs, Time are the most quintessential dimensions needed to build the fact table, which is then used to derive insights.
-- **FACT TABLE:** contains the required dimensions to categorize and their measures (build aggregations) to derive facts, which enables analyze the user behavior.
+- For Apache Cassandra, the best strategy would be to have <b>one TABLE per one QUERY.</b>
+- Artists, Users, Songs are dimensions needed to build the tables, which is then used to derive insights.
+- Since these tables are used for analytics they are expected to be <b>DE-NORMALIZED.</b>
 
-![STAR SCHEMA](Sparkifydb.png)
+![TABLE1 SCHEMAS](images/Query_table1.png)
+
+![TABLE2 SCHEMAS](images/Query_table2.png)
+
+![TABLE3 SCHEMAS](images/Query_table3.png)
 
 ### Perform Normalization
 > 1. Ensured the Dimension tables meet the 3NF (Normalization Form)
