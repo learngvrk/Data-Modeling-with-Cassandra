@@ -20,6 +20,7 @@ The business is looking to answer the following questions or would like to view 
 2. Give me only the following: name of artist, song (sorted by itemInSession) and user (first and last name) for userid = 10, sessionid = 182
 3. Give me every user name (first and last) in my music app history who listened to the song 'All Hands Against His Own'
 </b>
+
 ### Database Schema
 
 - For Apache Cassandra, the best strategy would be to have <b>one TABLE per one QUERY.</b>
