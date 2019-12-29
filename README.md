@@ -23,17 +23,23 @@ The business is looking to answer the following questions or would like to analy
 
 ### ETL Pipeline for Pre-Processing the Files
 
-1. Find all the sub-directories, files (event-log data) within the sub-directories within the files.
-2. Identify all the files within the sub-directories and create a list of file(s) absolute path.
-3. Loop through each of the file name and Open the file (.csv)
-  1. Skip the first line in the file
-  2. Read through the lines in rest of the file and append it to list
-  3. Close the file
-4. Open a new csv file
-5. Loop through the list created earlier
-  1. Ignore the list item if the artist_name is Empty.
-  2. Write the selected list items to each line of the .csv file
-6. Close the csv file.
+<ol>
+<li> Find all the sub-directories, files (event-log data) within the sub-directories within the files.
+<li> Identify all the files within the sub-directories and create a list of file(s) absolute path.
+<li> Loop through each of the file name and Open the file (.csv)
+  <ol>
+  <li> Skip the first line in the file
+  <li> Read through the lines in rest of the file and append it to list
+  <li> Close the file
+  </ol>
+<li> Open a new csv file
+<li> Loop through the list created earlier
+  <ol>
+  <li> Ignore the list item if the artist_name is Empty.
+  <li> Write the selected list items to each line of the .csv file
+  </ol>
+<li> Close the csv file.
+</ol>
 
 ### Database Schema
 
