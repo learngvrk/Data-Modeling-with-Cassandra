@@ -70,6 +70,7 @@ The business is looking to answer the following questions or would like to analy
   <li> Establish connection to the local instance of the Apache Cassandra with replication factor=1.</li>
   <li> Create CREATE TABLE statements to create tables per query.</li>
   <li> Create INSERT INTO TABLE statements to enter the event data into the tables.</li>
+  <li> Extract data from the CSV file created from the ETL pipeline and add it to the INSERT statements.</li>
 </ol>
 
 ### Convert Jupter Note Book Code into Modular Python code (.py) file
