@@ -21,6 +21,20 @@ The business is looking to answer the following questions or would like to analy
 3. Give me every user name (first and last) in my music app history who listened to the song 'All Hands Against His Own'
 </b>
 
+### ETL Pipeline for Pre-Processing the Files
+
+1. Find all the sub-directories, files (event-log data) within the sub-directories within the files.
+2. Identify all the files within the sub-directories and create a list of file(s) absolute path.
+3. Loop through each of the file name and Open the file (.csv)
+  1. Skip the first line in the file
+  2. Read through the lines in rest of the file and append it to list
+  3. Close the file
+4. Open a new csv file
+5. Loop through the list created earlier
+  1. Ignore the list item if the artist_name is Empty.
+  2. Write the selected list items to each line of the .csv file
+6. Close the csv file.
+
 ### Database Schema
 
 - For Apache Cassandra, the best strategy would be to have <b>one TABLE per one QUERY.</b>
